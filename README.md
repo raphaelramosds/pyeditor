@@ -4,14 +4,11 @@ A simple text editor
 
 ## Features plan
 
-[  ] Write contents within a text area
-
-[  ] Save a file
-
-[  ] Open a file
-
-[  ] Style content: bold, italic, color
-
-[  ] Undo change
-
-[  ] Redo change
+| Description | Status |
+| ----------- | -------|
+| Write contents within a text area | Pending |
+| Save a file | Pending |
+| Open a file | Pending |
+| Style content: bold, italic, color | Pending |
+| Undo change | Pending |
+| Redo change | Pending |
