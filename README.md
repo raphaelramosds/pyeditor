@@ -8,7 +8,7 @@ A simple text editor
 | ----------- | -------|
 | Write contents within a text area | Done |
 | Save a file | Done |
-| Open a file | Pending |
+| Open a file | Done |
 | Style content: bold, italic, color | Pending |
 | Undo change | Pending |
 | Redo change | Pending |
