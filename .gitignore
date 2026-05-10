@@ -1,0 +1,4 @@
+# deploy
+dist/
+build/
+app.spec
