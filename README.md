@@ -2,6 +2,8 @@
 
 A simple text editor
 
+![Pyeditor](img/pyeditor-010.png)
+
 ## Development
 
 This is a application written with Python 3.12 `tkinter` module. Run it by executing:
