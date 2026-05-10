@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import filedialog
 
 class App(tk.Frame):
     def __init__(self, master):
@@ -12,8 +13,16 @@ class App(tk.Frame):
         self.content.pack()
     
     def on_save_file(self):
-        content = self.content.get("1.0", "end-1c")
-        print(content)
+        curr_content = self.content.get("1.0", "end-1c")
+        filename = filedialog.asksaveasfilename(
+            filetypes=[
+                ('All Files', '*.*'),
+                ('Text Document', '*.txt')
+            ]
+        )
+        if filename:
+            with open(filename, "w") as f:
+                f.write(curr_content)
 
 root = tk.Tk()
 root.update()
