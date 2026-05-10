@@ -2,14 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.1.0 - 10/05/2026
+## 0.1.0 - 2026-05-10
 
 ## Fixed
 
 - Text area will fill all root widget as it is resized
 - Format content as UTF-8 when opening a file
 
-## 0.1.0-rc - 10/05/2026
+## 0.1.0-rc - 2026-05-10
 
 _First release._
 
