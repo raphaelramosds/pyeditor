@@ -15,8 +15,17 @@ class App(tk.Frame):
         filemenu.add_command(label="Sair", command=self.master.quit)
         self.menubar.add_cascade(label="Arquivo", menu=filemenu)
 
-        self.content = tk.Text(self)
-        self.content.pack()
+        self.content = tk.Text(
+            self,
+            # Will fill screen as it is resized
+            width=self.master.winfo_vrootwidth(),
+            height=self.master.winfo_vrootheight()
+        )
+        self.content.focus()
+        self.content.pack(
+            fill=tk.BOTH,
+            expand=True
+        )
 
     def on_save_file(self):
         curr_content = self.content.get("1.0", "end-1c")
@@ -34,6 +43,7 @@ class App(tk.Frame):
         )
 
         if filename != "":
+            self.content.delete("1.0", "end-1c")
             with open(filename, "r", encoding="UTF-8") as f:
                 text = f.read()
                 self.content.insert("end-1c", text)
@@ -43,10 +53,12 @@ class App(tk.Frame):
 def main():
     root = tk.Tk()
     root.update()
-    root.minsize(root.winfo_width(), root.winfo_height())
+    
+    # Define initial size
+    root.geometry("800x400")
 
     app = App(root)
-    root.config(menu=app.menubar)
+    app.master.config(menu=app.menubar)
     app.master.title("Pyeditor")
     app.mainloop()
 
